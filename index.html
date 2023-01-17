@@ -9,90 +9,89 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <title>Document</title>
 </head>
 
-<body class="min-vh-100 d-flex flex-column">
-    <section class="navbar-container">
-        <nav class="bg-white navbar navbar-expand navbar-light py-0 shadow-sm">
-            <div class="container-fluid">
-                <a class="navbar-brand" to="/">
-                    <img src="assets/images/Shardeen_ERP.png" alt="Shardeen ERP" height=35 />
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#erpNavbar"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="erpNavbar">
-                    Login Icon
+<body>
+    <main id="sec-base-body">
+        <section id="sec-navbar">
+            <nav class="bg-white navbar navbar-expand navbar-light py-0 shadow-sm">
+                <div class="container-fluid">
+                    <a class="navbar-brand animate__animated animate__bounce" to="/">
+                        <img src="assets/images/Shardeen_ERP.png" alt="Shardeen ERP" height=35 />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#erpNavbar"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="erpNavbar">
+                        Login Icon
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </section>
+            </nav>
+        </section>
 
-    <section class="page-content-container flex-fill d-flex">
-
-        <section class="sidebar-container">
-            <div class="h-100 d-flex position-relative overflow-hidden">
-                <section class="w-100 mb-4 pb-2">
-                    <div class="align-items-center d-flex overflow-hidden mt-2">
-                        <span class="project-logo d-flex align-items-center justify-content-center">
-                            <img src="assets/images/Shardeen.png" alt="Project" />
-                        </span>
-                        <div class="project-title">
-                            Project Name
+        <section id="sec-main-body">
+            <section id="sec-sidebar">
+                <div class="h-100 d-flex position-relative overflow-hidden border-end">
+                    <section id="cntnr-sidebar" class="w-100 mb-4 pb-2">
+                        <div class="align-items-center d-flex overflow-hidden mt-2">
+                            <span class="project-logo d-flex align-items-center justify-content-center">
+                                <img src="assets/images/Shardeen.png" alt="Project" />
+                            </span>
+                            <div class="project-title">
+                                Project Name
+                            </div>
                         </div>
+
+                        <div class="h-100 pt-1">
+                            <ul class="p-0 text-left">
+                                <li class="d-flex align-items-center mt-2">
+                                    <a href="/" class="h-100 w-100 d-flex align-items-center text-decoration-none rounded">
+                                        <i class="bx bx-home-alt sidebar-option-icon" title="Home"></i>
+                                        <span class="sidebar-option-text">Home</span>
+                                    </a>
+                                </li>
+                                <li class="d-flex align-items-center mt-2">
+                                    <a href="/login" class="h-100 w-100 d-flex align-items-center text-decoration-none rounded">
+                                        <i class="bx bx-log-in sidebar-option-icon" title="Login"></i>
+                                        <span class="sidebar-option-text">Login</span>
+                                    </a>
+                                </li>
+                                <li class="d-flex align-items-center mt-2">
+                                    <a href="/register-org" class="h-100 w-100 d-flex align-items-center text-decoration-none rounded">
+                                        <i class="bx bx-add-to-queue sidebar-option-icon" title="Register Organisation"></i>
+                                        <span class="sidebar-option-text">Register Organisation</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <div class="cursor-pointer d-flex position-absolute bottom-0 justify-content-between align-items-center w-100 bg-light" onclick="toggleSidebar()">
+                        <i class='bx bx-cog fs-4 btn border-0'></i>
+                        <i class='btn bx bx-chevrons-right fs-5 p-1 sidebar-toggle text-secondary border-0'></i>
                     </div>
-                    
-                    <div class="h-100 pt-1">
-                        <ul class="p-0 text-left">
-                            <li class="d-flex align-items-center mt-2">
-                                <a href="/" class="h-100 w-100 d-flex align-items-center text-decoration-none">
-                                    <i class="bx bx-home-alt sidebar-option-icon" title="Home"></i>
-                                    <span class="sidebar-option-text">Home</span>
-                                </a>
-                            </li>
-                            <li class="d-flex align-items-center mt-2">
-                                <a href="/login" class="h-100 w-100 d-flex align-items-center text-decoration-none">
-                                    <i class="bx bx-log-in sidebar-option-icon" title="Login"></i>
-                                    <span class="sidebar-option-text">Login</span>
-                                </a>
-                            </li>
-                            <li class="d-flex align-items-center mt-2">
-                                <a href="/register-org" class="h-100 w-100 d-flex align-items-center text-decoration-none">
-                                    <i class="bx bx-add-to-queue sidebar-option-icon" title="Register Organisation"></i>
-                                    <span class="sidebar-option-text">Register Organisation</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <div class="d-flex position-absolute bottom-0 justify-content-between align-items-center w-100 bg-light"
-                    onclick="toggleSidebar()">
-                    <i class='bx bx-cog fs-4 btn border-0'></i>
-                    <i class='btn bx bx-chevrons-right fs-5 p-1 sidebar-toggle text-secondary border-0'></i>
                 </div>
-            </div>
+            </section>
+
+            <section id="sec-page-wrapper">
+                <div class="col bg-secondary bg-opacity-25">
+                    main
+                </div>
+            </section>
         </section>
 
-        <section class="main-content-container">
-            <div class="col bg-secondary bg-opacity-25">
-                main
-            </div>
+        <section id="sec-main-footer">
+            <footer class='bg-light shadow border-top p-3 bg-gradient text-center text-secondary small'>
+                &#169; 2022 - Project Management System | All Rights Reserved
+            </footer>
         </section>
-
-    </section>
-
-    <section class="footer-container">
-        <footer class='bg-light shadow border-top p-3 bg-gradient text-center text-secondary small'>
-            &#169; 2022 - Project Management System | All Rights Reserved
-        </footer>
-    </section>
+    </main>
 
     <script>
         function toggleSidebar() {
-            document.querySelector(".sidebar-container").classList.toggle("open");
+            document.getElementById("sec-sidebar").classList.toggle("open");
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+#sec-base-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  #sec-navbar {
+    z-index: 1;
+  }
+
+  #sec-main-body {
+    flex: 1 1 auto;
+    display: flex;
+
+    #sec-sidebar {
+      //#region variables-sidebar
+      --sidebar-background-color: white;
+      --sidebar-width-closed: 70px;
+      --sidebar-width-open: 250px;
+      --sidebar-text-color: #707070;
+      --sidebar-text-color-hover: #707070;
+      --sidebar-text-background-color-hover: #f8f9fa;
+      //#endregion
+      width: var(--sidebar-width-closed);
+      transition: all 0.3s ease;
+      background-color: var(--sidebar-background-color);
+
+      .sidebar-toggle {
+        transition: transform 0.6s ease;
+      }
+      &.open {
+        width: var(--sidebar-width-open);
+        .sidebar-toggle {
+          transform: scaleX(-1);
+        }
+      }
+      .sidebar-option-text {
+        color: var(--sidebar-text-color);
+        font-weight: 500;
+        white-space: nowrap;
+      }
+      .sidebar-option-icon {
+        min-width: var(--sidebar-width-closed);
+        text-align: center;
+        font-size: 20px;
+        color: var(--sidebar-text-color);
+        transition: all 0.3s ease;
+      }
+      .project-title {
+        margin-top: 2px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        min-width: calc(
+          var(--sidebar-width-open) - var(--sidebar-width-closed)
+        );
+      }
+      .project-logo {
+        min-width: var(--sidebar-width-closed);
+        border-radius: 0.5rem;
+        img {
+          width: 45px;
+        }
+      }
+      li {
+        height: 30px;
+        a {
+          transition: all 0.3s ease;
+          &:hover {
+            box-shadow: 0.125rem 0.1rem rgba(0, 0, 0, 0.075);
+            background-color: var(--sidebar-text-background-color-hover);
+            .sidebar-option-icon {
+              color: var(--sidebar-text-color-hover);
+            }
+            .sidebar-option-text {
+              color: var(--sidebar-text-color-hover);
+            }
+          }
+        }
+      }
+    }
+
+    #sec-page-wrapper {
+      flex: 1 1 auto;
+    }
+  }
+}
