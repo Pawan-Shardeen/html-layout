@@ -1,18 +1,29 @@
-* {
+/*#region Common-Css*/
+*{
   margin: 0;
   padding: 0;
   font-size: 0.9rem;
+  scroll-behavior: smooth;
 }
-.cursor-pointer {
+.cursor-pointer{
   cursor: pointer;
+}
+/*#endregion*/
+
+/*#region Layout-Css*/
+:root{
+  --navbar-height:44px;
 }
 #sec-base-body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 
-  #sec-navbar {
-    z-index: 1;
+  #sec-main-navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
   }
 
   #sec-main-body {
@@ -31,7 +42,25 @@
       width: var(--sidebar-width-closed);
       transition: all 0.3s ease;
       background-color: var(--sidebar-background-color);
+      max-height: calc(100vh - var(--navbar-height));
+      position: sticky;
+      top: var(--navbar-height);
 
+      #sec-sidebar-menu {
+        overflow-x: hidden;
+        height: 100%;
+        position: relative;
+        padding-top: 0.25rem;
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
       .sidebar-toggle {
         transition: transform 0.6s ease;
       }
@@ -91,3 +120,4 @@
     }
   }
 }
+/*#endregion*/

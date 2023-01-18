@@ -15,7 +15,7 @@
 
 <body>
     <main id="sec-base-body">
-        <section id="sec-navbar">
+        <section id="sec-main-navbar">
             <nav class="bg-white navbar navbar-expand navbar-light py-0 shadow-sm">
                 <div class="container-fluid">
                     <a class="navbar-brand animate__animated animate__bounce" to="/">
@@ -26,7 +26,19 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-end" id="erpNavbar">
-                        Login Icon
+                        <section id="sec-user-engagement">
+                            <div>
+                                <button type="button" class="border btn btn-light rounded-circle"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class='bx bxs-user'></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><button class="dropdown-item" type="button">Action</button></li>
+                                    <li><button class="dropdown-item" type="button">Another action</button></li>
+                                    <li><button class="dropdown-item" type="button">Something else here</button></li>
+                                </ul>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </nav>
@@ -34,8 +46,8 @@
 
         <section id="sec-main-body">
             <section id="sec-sidebar">
-                <div class="h-100 d-flex position-relative overflow-hidden border-end">
-                    <section id="cntnr-sidebar" class="w-100 mb-4 pb-2">
+                <div class="border-end d-flex h-100 overflow-hidden position-relative">
+                    <section id="cntnr-sidebar" class="mb-4 pb-2">
                         <div class="align-items-center d-flex overflow-hidden mt-2">
                             <span class="project-logo d-flex align-items-center justify-content-center">
                                 <img src="assets/images/Shardeen.png" alt="Project" />
@@ -44,31 +56,37 @@
                                 Project Name
                             </div>
                         </div>
-
-                        <div class="h-100 pt-1">
-                            <ul class="p-0 text-left">
-                                <li class="d-flex align-items-center mt-2">
-                                    <a href="/" class="h-100 w-100 d-flex align-items-center text-decoration-none rounded">
-                                        <i class="bx bx-home-alt sidebar-option-icon" title="Home"></i>
-                                        <span class="sidebar-option-text">Home</span>
-                                    </a>
-                                </li>
-                                <li class="d-flex align-items-center mt-2">
-                                    <a href="/login" class="h-100 w-100 d-flex align-items-center text-decoration-none rounded">
-                                        <i class="bx bx-log-in sidebar-option-icon" title="Login"></i>
-                                        <span class="sidebar-option-text">Login</span>
-                                    </a>
-                                </li>
-                                <li class="d-flex align-items-center mt-2">
-                                    <a href="/register-org" class="h-100 w-100 d-flex align-items-center text-decoration-none rounded">
-                                        <i class="bx bx-add-to-queue sidebar-option-icon" title="Register Organisation"></i>
-                                        <span class="sidebar-option-text">Register Organisation</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                        <section id="sec-sidebar-menu">
+                            <div class="position-absolute top-0 w-100">
+                                <ul class="mb-5 p-0 pb-4 text-left">
+                                    <li class="d-flex align-items-center mt-2">
+                                        <a href="/"
+                                            class="h-100 w-100 d-flex align-items-center text-decoration-none rounded">
+                                            <i class="bx bx-home-alt sidebar-option-icon" title="Home"></i>
+                                            <span class="sidebar-option-text">Home</span>
+                                        </a>
+                                    </li>
+                                    <li class="d-flex align-items-center mt-2">
+                                        <a href="/login"
+                                            class="h-100 w-100 d-flex align-items-center text-decoration-none rounded">
+                                            <i class="bx bx-log-in sidebar-option-icon" title="Login"></i>
+                                            <span class="sidebar-option-text">Login</span>
+                                        </a>
+                                    </li>
+                                    <li class="d-flex align-items-center mt-2">
+                                        <a href="/register-org"
+                                            class="h-100 w-100 d-flex align-items-center text-decoration-none rounded">
+                                            <i class="bx bx-add-to-queue sidebar-option-icon"
+                                                title="Register Organisation"></i>
+                                            <span class="sidebar-option-text">Register Organisation</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
                     </section>
-                    <div class="cursor-pointer d-flex position-absolute bottom-0 justify-content-between align-items-center w-100 bg-light" onclick="toggleSidebar()">
+                    <div class="cursor-pointer d-flex position-absolute bottom-0 justify-content-between align-items-center w-100 bg-light"
+                        onclick="toggleSidebar()">
                         <i class='bx bx-cog fs-4 btn border-0'></i>
                         <i class='btn bx bx-chevrons-right fs-5 p-1 sidebar-toggle text-secondary border-0'></i>
                     </div>
@@ -92,6 +110,10 @@
     <script>
         function toggleSidebar() {
             document.getElementById("sec-sidebar").classList.toggle("open");
+        }
+        window.onload = (event)=>{
+            let navbar = document.getElementById("sec-main-navbar");
+            document.querySelector(':root').style.setProperty('--navbar-height', `${navbar.offsetHeight}px`);
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
