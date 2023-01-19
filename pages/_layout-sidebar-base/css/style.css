@@ -13,7 +13,7 @@
 /*#endregion*/
 /*#region Layout-Css*/
 :root {
-  --navbar-height: 44px;
+  --navbar-height:44px;
 }
 
 #sec-base-body {
@@ -27,22 +27,16 @@
   top: 0;
   z-index: 1020;
 }
-#sec-base-body #sec-main-navbar #sec-user-engagement {
-  --userEngagement-text-color: #707070;
-  --userEngagement-text-color-hover: #707070;
-  --userEngagement-text-background-color-hover: #f8f9fa;
-}
 #sec-base-body #sec-main-navbar #sec-user-engagement .dropdown-menu {
   top: 95%;
   right: 1%;
 }
 #sec-base-body #sec-main-navbar #sec-user-engagement .dropdown-menu .dropdown-item {
   font-weight: 400;
-  color: var(--userEngagement-text-color);
+  color: #707070;
 }
 #sec-base-body #sec-main-navbar #sec-user-engagement .dropdown-menu .dropdown-item:active, #sec-base-body #sec-main-navbar #sec-user-engagement .dropdown-menu .dropdown-item:hover {
-  color: var(--userEngagement-text-color-hover);
-  background-color: var(--userEngagement-text-background-color-hover);
+  background-color: #f8f9fa;
   box-shadow: 0.125rem 0.1rem rgba(0, 0, 0, 0.075);
 }
 #sec-base-body #sec-main-body {
@@ -51,7 +45,7 @@
 }
 #sec-base-body #sec-main-body #sec-sidebar {
   --sidebar-background-color: white;
-  --sidebar-width-closed: 60px;
+  --sidebar-width-closed: 40px;
   --sidebar-width-open: 250px;
   --sidebar-text-color: #707070;
   --sidebar-text-color-hover: #707070;
@@ -109,7 +103,7 @@
   border-radius: 0.5rem;
 }
 #sec-base-body #sec-main-body #sec-sidebar .project-logo img {
-  width: 80%;
+  width: 90%;
 }
 #sec-base-body #sec-main-body #sec-sidebar li {
   height: 30px;

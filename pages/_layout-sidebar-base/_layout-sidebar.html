@@ -9,7 +9,7 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
 
@@ -19,7 +19,7 @@
             <nav class="bg-white navbar navbar-expand navbar-light py-0 shadow-sm">
                 <div class="container-fluid">
                     <a class="navbar-brand" to="/">
-                        <img src="assets/images/Shardeen_ERP.png" alt="Shardeen ERP" height=35 />
+                        <img src="/assets/images/Shardeen_ERP.png" alt="Shardeen ERP" height=35 />
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#erpNavbar"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,7 +53,7 @@
                     <section id="cntnr-sidebar" class="mb-4 pb-2">
                         <div class="align-items-center d-flex overflow-hidden mt-2">
                             <span class="project-logo d-flex align-items-center justify-content-center">
-                                <img src="assets/images/Shardeen.png" alt="Project" />
+                                <img src="/assets/images/Shardeen.png" alt="Project" />
                             </span>
                             <div class="project-title">
                                 Project Name
@@ -63,7 +63,7 @@
                             <div class="position-absolute top-0 w-100">
                                 <ul class="mb-5 p-0 pb-4 text-left">
                                     <li class="d-flex align-items-center mt-2">
-                                        <a href="/pages/_layout-sidebar-base/_layout-sidebar.html"
+                                        <a href="/"
                                             class="h-100 w-100 d-flex align-items-center text-decoration-none rounded">
                                             <i class="bx bx-home-alt sidebar-option-icon" title="Home"></i>
                                             <span class="sidebar-option-text">Home</span>
@@ -90,7 +90,7 @@
                     </section>
                     <div class="cursor-pointer d-flex position-absolute bottom-0 justify-content-between align-items-center w-100 bg-light"
                         onclick="toggleSidebar()">
-                        <i class='bx bx-cog fs-4 btn border-0 sidebar-option-icon'></i>
+                        <i class='bx bx-cog fs-4 btn border-0'></i>
                         <i class='btn bx bx-chevrons-right fs-5 p-1 sidebar-toggle text-secondary border-0'></i>
                     </div>
                 </div>
@@ -114,11 +114,7 @@
         function toggleSidebar() {
             document.getElementById("sec-sidebar").classList.toggle("open");
         }
-        window.onload = (event) => {
-            //Initializing Bootstrapl tooltips
-            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-
+        window.onload = (event)=>{
             let navbar = document.getElementById("sec-main-navbar");
             document.querySelector(':root').style.setProperty('--navbar-height', `${navbar.offsetHeight}px`);
         }

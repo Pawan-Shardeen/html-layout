@@ -1,0 +1,39 @@
+/*#region Common-Css*/
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+  scroll-behavior: smooth;
+}
+
+/*#endregion*/
+/*#region Layout-Css*/
+#sec-base-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+#sec-base-body #sec-main-navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+#sec-base-body #sec-main-navbar #sec-user-engagement .dropdown-menu {
+  top: 95%;
+  right: 1%;
+}
+#sec-base-body #sec-main-navbar #sec-user-engagement .dropdown-menu .dropdown-item {
+  font-weight: 400;
+  color: #707070;
+}
+#sec-base-body #sec-main-navbar #sec-user-engagement .dropdown-menu .dropdown-item:active, #sec-base-body #sec-main-navbar #sec-user-engagement .dropdown-menu .dropdown-item:hover {
+  background-color: #f8f9fa;
+  box-shadow: 0.125rem 0.1rem rgba(0, 0, 0, 0.075);
+}
+#sec-base-body #sec-main-body {
+  flex: 1 1 auto;
+  display: flex;
+}
+
+/*#endregion*//*# sourceMappingURL=style.css.map */

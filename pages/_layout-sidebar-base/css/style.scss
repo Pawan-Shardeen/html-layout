@@ -1,18 +1,18 @@
 /*#region Common-Css*/
-* {
+*{
   margin: 0;
   padding: 0;
   font-size: 0.9rem;
   scroll-behavior: smooth;
 }
-.cursor-pointer {
+.cursor-pointer{
   cursor: pointer;
 }
 /*#endregion*/
 
 /*#region Layout-Css*/
-:root {
-  --navbar-height: 44px;
+:root{
+  --navbar-height:44px;
 }
 #sec-base-body {
   min-height: 100vh;
@@ -26,20 +26,14 @@
     z-index: 1020;
 
     #sec-user-engagement {
-      //#region variables-userEngagement
-      --userEngagement-text-color: #707070;
-      --userEngagement-text-color-hover: #707070;
-      --userEngagement-text-background-color-hover: #f8f9fa;
-      //#endregion
       .dropdown-menu {
         top: 95%;
         right: 1%;
         .dropdown-item {
           font-weight: 400;
-          color: var(--userEngagement-text-color);
+          color: #707070;
           &:active,&:hover {
-            color: var(--userEngagement-text-color-hover);
-            background-color: var(--userEngagement-text-background-color-hover);
+            background-color: #f8f9fa;
             box-shadow: 0.125rem 0.1rem rgba(0, 0, 0, 0.075);
           }
         }
@@ -54,7 +48,7 @@
     #sec-sidebar {
       //#region variables-sidebar
       --sidebar-background-color: white;
-      --sidebar-width-closed: 60px;
+      --sidebar-width-closed: 40px;
       --sidebar-width-open: 250px;
       --sidebar-text-color: #707070;
       --sidebar-text-color-hover: #707070;
@@ -115,7 +109,7 @@
         min-width: var(--sidebar-width-closed);
         border-radius: 0.5rem;
         img {
-          width: 80%;
+          width: 90%;
         }
       }
       li {
