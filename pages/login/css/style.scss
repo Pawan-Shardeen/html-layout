@@ -1,0 +1,72 @@
+/*#region Common-Css*/
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+  scroll-behavior: smooth;
+}
+/*#endregion*/
+
+/*#region Layout-Css*/
+#sec-base-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  #sec-main-navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+
+    #sec-user-engagement {
+      .dropdown-menu {
+        top: 95%;
+        right: 1%;
+        .dropdown-item {
+          font-weight: 400;
+          color: #707070;
+          &:active,
+          &:hover {
+            background-color: #f8f9fa;
+            box-shadow: 0.125rem 0.1rem rgba(0, 0, 0, 0.075);
+          }
+        }
+      }
+    }
+  }
+
+  #sec-main-body {
+    flex: 1 1 auto;
+    display: flex;
+
+    #cntnr-userLogin {
+      background-image: url("/assets/images/white-background.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-size: smaller;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 1 1 auto;
+
+      &>div{
+        min-width: 500px;
+      }
+
+      label,
+      a {
+        margin: 0;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      *:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}
+/*#endregion*/
