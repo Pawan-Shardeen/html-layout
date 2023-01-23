@@ -18,7 +18,7 @@
         <section id="sec-main-navbar">
             <nav class="bg-white navbar navbar-expand navbar-light py-0 shadow-sm">
                 <div class="container-fluid">
-                    <a class="navbar-brand" to="/">
+                    <a class="navbar-brand" href="/">
                         <img src="assets/images/Shardeen_ERP.png" alt="Shardeen ERP" height=35 />
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#erpNavbar"
@@ -32,13 +32,9 @@
                                 <i class='bx bxs-user'></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end m-0 ">
-                                <a class="dropdown-item btn" href="/pages/login/login.html">
+                                <a class="dropdown-item btn" href="/pages/login">
                                     <i class="bx bx-log-in" title="Login"></i>
                                     <span class="sidebar-option-text">Login</span>
-                                </a>
-                                <a class="dropdown-item btn" href="/pages/register/register.html">
-                                    <i class="bx bx-add-to-queue" title="Register Organisation"></i>
-                                    <span class="sidebar-option-text">Register</span>
                                 </a>
                             </div>
                         </section>
@@ -247,7 +243,7 @@
                     </section>
                     <div class="cursor-pointer sidebar-menu-item d-flex position-absolute bottom-0 justify-content-between align-items-center w-100 bg-light"
                         onclick="toggleSidebar()">
-                        <i class='bx bx-cog fs-4 btn border-0 sidebar-option-icon'></i>
+                        <i class='bx bx-cog fs-4 btn border-0 sidebar-option-icon pe-0' style="min-width: auto;"></i>
                         <i class='btn bx bx-chevrons-right fs-5 p-1 sidebar-toggle text-secondary border-0'></i>
                     </div>
                 </div>
@@ -272,7 +268,7 @@
             document.getElementById("sec-sidebar").classList.toggle("open");
         }
         window.onload = (event) => {
-            //Initializing Bootstrapl tooltips
+            //Initializing Bootstrap tooltips
             const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
             const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 
